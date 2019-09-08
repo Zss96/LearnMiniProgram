@@ -1,7 +1,9 @@
 //index.js
+//要创建页面对象
 //获取应用实例
 const app = getApp()
 
+//要创建页面对象
 Page({
   data: {
     motto: 'Hello World',
