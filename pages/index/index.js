@@ -7,6 +7,14 @@ const app = getApp()
 Page({
   data: {
     motto: 'Hello World',
+    testname: "Hello 小程序",
+    students: [
+      { id: 111, name: "zss", age: 22 },
+      { id: 112, name: "zzj", age: 23 },
+      { id: 113, name: "zcl", age: 24 },
+      { id: 114, name: "zhr", age: 25 },
+    ],
+    counter: 0,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -17,6 +25,23 @@ Page({
       url: '../logs/logs'
     })
   },
+  addcounter() {
+    //1错误做法：界面是不会刷新的
+    //this.data.counter +=1
+    //console.log(this.data.counter)
+
+    //2this.setData()
+    this.setData({
+      counter: this.data.counter+1
+    })
+  },
+  subtractioncounter() {
+    this.setData({
+      counter: this.data.counter - 1
+    })
+  },
+  //生命周期函数
+  //小程序初始化完成时，会执行的生命周期函数
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -52,5 +77,9 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  onShow: function () {
+    console.log()
+  },
+
 })

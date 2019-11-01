@@ -1,5 +1,8 @@
 //app.js
+//注册小程序示例
 App({
+  //生命周期函数
+  //小程序初始化完成时，会执行的生命周期函数
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -20,6 +23,7 @@ App({
           wx.getUserInfo({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
+              console.log(res)
               this.globalData.userInfo = res.userInfo
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -35,5 +39,16 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  //小程序界面显示出来之后会执行的生命周期函数
+  onShow: function (options){
+    console.log("界面显示出来: onShow")
+  },
+  onHide: function() {
+    console.log("界面被隐藏时执行：onHide")
+  },
+  onError: function() {
+    console.log("小程序发送一些错误时执行")
   }
+
 })

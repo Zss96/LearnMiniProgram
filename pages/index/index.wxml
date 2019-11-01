@@ -11,4 +11,20 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+
+  <!-- 1小程序的绑定 -->
+  <view>Hello 小程序</view>
+  <view>{{testname}}</view>
+
+  <!--2列表展示 wx:for -->
+  <view>{{students[0]}}</view>
+  <view>{{students[0].name}}</view>
+  <view wx:for="{{students}}" wx:key="item">{{item.name}}--{{item.age}}</view>
+  
+  <!-- 3.事件监听改变data -->
+  <view>当前计数: {{counter}}</view>
+  <button size="mini" bindtap="addcounter">+</button>
+  <button size="mini" bindtap="subtractioncounter">-</button>
+
+    
 </view>
