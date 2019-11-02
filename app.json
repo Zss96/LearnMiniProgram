@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/toast/toast",
+ 
     "pages/about/about"
   ],
   "window": {
