@@ -1,0 +1,42 @@
+<!--pages/wxml/wxml.wxml-->
+<text>pages/wxml/wxml.wxml</text>
+
+<!-- wx:if   wx:elif/wx: else -->
+
+<!-- wx:if为false是没有创建 -->
+
+<!-- wx:for -->
+<!-- 遍历数组/字符串/数字 -->
+<!-- <view wx:for="{{['aaa','bbb','ccc']}}" :key="index">{{item}}</view>
+
+<view wx:for="zssshusen">{{item}}</view>
+
+
+<view wx:for="{{9}}">{{item}}</view> -->
+
+<!-- 取名字 -->
+ <!-- <view wx:for="{{['aaa','bbb','ccc']}}"wx:for-item="shuzu" wx:for-index="i">{{shuzu}}==={{i}}</view> -->
+
+<!--3. block标签 只接收控制属性,不会再页面渲染-->
+<!-- 在wx:if或wx:for时,用于包裹一组组件的标签 -->
+
+<!-- 3.item,index取名字 -->
+
+<!-- 4.模板语法 -->
+<view>-----template------</view>
+<!-- 之前小程序不支持自定义组件,为了进行代码的复用
+ 必须有name-->
+ <!-- 模板包裹的内容,在没有使用时,是不会进行然后渲染的 -->
+
+ <!-- 可以通过<import src="相对/绝对路径">导入模板 
+ 注意,不能循环导入,即递归导入-->
+
+<!-- <include>除了将template和wxs不能导入,相当于复制 -->
+<template name="contentItem">
+  <button size="mini">{{btnText}}</button>
+  <view>{{content}}</view>
+</template>
+
+<template is="contentItem" data="{{btnText:'按钮', content:'haha'}}"/>
+
+

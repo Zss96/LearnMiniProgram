@@ -1,0 +1,24 @@
+/* pages/event/event.wxss */
+.box {
+  width: 300rpx;
+  height: 300rpx;
+  background: orange;
+}
+.outer {
+  width: 300rpx;
+  height: 300rpx;
+  background: red;
+}
+.inner {
+  width: 200rpx;
+  height: 200rpx;
+  background: blue;
+  color: #fff;
+}
+.container1{
+  display: flex;
+}
+.item {
+  flex: 1;
+  text-align: center;
+}

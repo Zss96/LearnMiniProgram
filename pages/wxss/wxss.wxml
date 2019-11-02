@@ -1,0 +1,10 @@
+<!--pages/wxss/wxss.wxml-->
+<text>pages/wxss/wxss.wxml</text>
+<!-- 全局样式 -->
+<view class="container">行内样式>页面样式>全局样式</view>
+
+<!-- rpx:自适应像素 在375px屏幕宽度,共有750个物理像素,则750rpx=357px=750无论像素,1rpx=0.5px=1个物理像素-->
+<!-- 默认是px的一半 -->
+<view class="box1">哈哈</view>
+<view class="box2">哈哈</view>
+

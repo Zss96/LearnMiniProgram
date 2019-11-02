@@ -1,0 +1,15 @@
+//价格格式化
+function priceFormat(price, number){
+  var number = number || 2;
+
+  return price.toFixed(number)
+}
+
+//时间格式化
+function dateFormat(date,format){
+  
+  return xxx;
+}
+module.exports ={
+  priceFormat: priceFormat,
+}

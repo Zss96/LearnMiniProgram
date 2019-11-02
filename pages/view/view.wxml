@@ -1,0 +1,24 @@
+<!--pages/view/view.wxml-->
+<!-- <text>pages/view/view.wxml</text> -->
+
+<!-- view的基本使用 -->
+<view class="box">相当于div,可以看成容器</view>
+
+<!-- 2.hover-class :当用户按下组件是，显示的样式 -->
+<!-- hover-start-time 设置点击开始时间 -->
+<!-- hover-stay-time设置手指点击后保留的时间，单位为毫秒 -->
+<!-- hover-stop-propagation 是否阻止祖先的节点是否点击 {{false}}和''是阻止' -->
+<view class="box1" 
+  hover-class="hover-view"
+  hover-hover-stay-time="2000">
+    box1
+</view>
+<view class="box2" hover-class="box2-hover">
+<view class="box1" 
+  hover-class="hover-view"
+  hover-hover-stay-time="2000"
+  hover-stop-propagation>
+    box1
+</view>
+</view>
+

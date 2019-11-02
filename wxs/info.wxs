@@ -1,0 +1,16 @@
+
+//JS代码  只能写ES5语法
+var message = "Hello World"
+var name = "coderwhy"
+
+var sum = function (num1, num2) {
+  return num1 + num2
+}
+
+//commonjs模块化导出写法
+module.exports = {
+  message: message,
+  name: name,
+  sum: sum
+
+}

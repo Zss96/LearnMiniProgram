@@ -1,0 +1,44 @@
+<!--pages/wxs/wxs.wxml-->
+<text>pages/wxs/wxs.wxml</text>
+<view>WXS</view>
+<view>WXS和js代码时隔离的，不能调用js定义的函数和小程序的api,以及不能做组件的回调函数</view>
+<view>处理数据</view>
+<!-- 错误语法 -->
+<!-- <view>{{26.6666666.toFixed(2}}</view> -->
+<!-- <view>{{number.toFoxed(26.666666)}}</view> -->
+
+<!-- 1.定义方式 必须给wxs一个属性，相当于取名字 -->
+<!-- 默认是私有的 -->
+<!-- <wxs module="info"> 
+  //JS代码  只能写ES5语法
+  var message = "Hello World"
+  var name = "coderwhy"
+
+  var sum = function(num1, num2){
+    return num1 + num2
+  }
+
+    //commonjs模块化导出写法
+  module.exports = {
+    message: message,
+    name: name,
+    sum: sum
+
+  } 
+</wxs>-->
+
+<!-- 2.单独再wxs文件中，再使用<wxs>标签进行导入 -->
+<!-- 不能使用绝对路径，必须使用相对路径 -->
+<wxs src="../../wxs/info.wxs" module="info" />
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(10,20)}}</view>
+
+
+<!-- 3wxs的应用 -->
+
+<wxs src="../../wxs/format.wxs" module="format" />
+<view> {{price}}</view>
+<view> {{format.priceFormat(price)}}</view>
+<view>{{time}}</view>
+
